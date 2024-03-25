@@ -2,10 +2,8 @@ package cl.wallettest.controllers;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import cl.wallettest.controllers.interfaces.ConversorMoneda;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.ls.LSOutput;
 
 /**
  *
@@ -52,7 +50,6 @@ class CuentaBancariaTest {
     @Test
     public void testDepositoInicialCuenta(){
         String textoSalida = "Saldo incial: ";
-
         String textoSalidaEsperado = textoSalida + valorInicial;
         cuentaBaancariaTest.depositarSaldoInicial( valorInicial );
         String textoSalidaConsaldo = textoSalida + cuentaBaancariaTest.getSaldoCuenta();
@@ -61,23 +58,18 @@ class CuentaBancariaTest {
 
     @Test
     public void depositoAlaCuenta(){
-
-
         double valorSaldoCuenta = cuentaBaancariaTest.getSaldoCuenta();
         double valorDespuesDeposito = valorDeposito + valorSaldoCuenta;
         cuentaBaancariaTest.despositoAlaCuenta(valorDeposito);
         assertEquals(valorDespuesDeposito , cuentaBaancariaTest.getSaldoCuenta());
-
     }
 
     @Test
     public void retiroALaCuenta(){
-
         double valorSaldoCuenta = cuentaBaancariaTest.getSaldoCuenta();
         double valorDespuesRetiro = valorSaldoCuenta - valorAretirar;
         cuentaBaancariaTest.retirarEnLaCuenta(valorAretirar);
         assertEquals( valorDespuesRetiro , cuentaBaancariaTest.getSaldoCuenta());
-
     }
 
     @Test
@@ -90,6 +82,5 @@ class CuentaBancariaTest {
         assertEquals( valorSalidaConversor , ( valorEsperadoDolar +   simboloMoneda) );
 
     }
-
-
+    
 }
