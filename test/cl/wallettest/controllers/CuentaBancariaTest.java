@@ -79,7 +79,7 @@ class CuentaBancariaTest {
         String simboloMoneda= cuentaImpl.obtenerSimboloMoneda();
         double valorEsperadoDolar = valorSaldoEnDolares / cuentaImpl.obTenerValorMoneda();
         String valorSalidaConversor =  valorEsperadoDolar + simboloMoneda;
-        assertEquals( valorSalidaConversor , ( valorEsperadoDolar +   simboloMoneda) );
+        assertEquals(valorEsperadoDolar + simboloMoneda, valorSalidaConversor);
 
     }
     
