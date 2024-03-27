@@ -54,7 +54,6 @@ class CuentaBancariaTest {
         //double saldoCuenta = cuentaBaancariaTest.getSaldoCuenta();
         double saldoCuenta = cuentaBaancariaTest.depositarPrimeraVez(this.saldoInicial);
         assertEquals( cuentaBaancariaTest.getSaldoCuenta(), saldoCuenta );
-        System.out.println(cuentaBaancariaTest.getSaldoCuenta());
     }
 
     @Test
@@ -62,7 +61,6 @@ class CuentaBancariaTest {
 
         double saldoCuenta = cuentaBaancariaTest.depositarPrimeraVez(this.saldoInicialMinimo);
         assertEquals( cuentaBaancariaTest.getSaldoCuenta(), saldoCuenta );
-        System.out.println(cuentaBaancariaTest.getSaldoCuenta());
     }
 
     @Test
@@ -73,7 +71,6 @@ class CuentaBancariaTest {
         double saldoCuenta = cuentaBaancariaTest.getSaldoCuenta();
         double saldoEsperado = saldoCuenta + valorAdepositar;
         assertEquals( saldoEsperado , cuentaBaancariaTest.hacerDeposito(valorAdepositar));
-        System.out.println("Saldo Cuenta " + cuentaBaancariaTest.getSaldoCuenta());
     }
 
     @Test
@@ -83,7 +80,6 @@ class CuentaBancariaTest {
         double saldoCuenta = cuentaBaancariaTest.getSaldoCuenta();
         double saldoEsperado = saldoCuenta - valorAretirar;
         assertEquals(saldoEsperado , cuentaBaancariaTest.hacerRetiro(valorAretirar));
-        System.out.println("El saldo es de :" + cuentaBaancariaTest.getSaldoCuenta());
 
     }
     @AfterEach

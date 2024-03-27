@@ -1,6 +1,10 @@
 package cl.wallettest.controllers;
 
-public class CuentaBancaria {
+import cl.wallettest.controllers.interfaces.ConversorMoneda;
+
+import java.util.Scanner;
+
+public class CuentaBancaria  {
 
     private boolean esMayorEdad;
     private double saldoCuenta;
@@ -60,4 +64,11 @@ public class CuentaBancaria {
 
         return this.saldoCuenta;
     }
+
+    public String convertirMoneda(Scanner scanner){
+
+        ConversorMonedaImpl conversor = new ConversorMonedaImpl(scanner);
+        return conversor.transformarSaldoAMoneda(this.saldoCuenta);
+    }
+
 }
